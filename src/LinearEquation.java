@@ -4,27 +4,30 @@ public class LinearEquation {
     private int x1;
     private int x2;
 
-    public LinearEquation(int y1, int y2, int x1, int x2){
+    public LinearEquation(int y1, int y2, int x1, int x2) {
         this.y1 = y1;
         this.y2 = y2;
         this.x1 = x1;
         this.x2 = x2;
     }
-    public double Roundtohundred(double Rounded){
+
+    public double Roundtohundred(double Rounded) {
         return Math.round(Rounded * 100.0) / 100.0;
     }
-    public double slope(){
+
+    public double slope() {
         double y = y2 - y1;
         double x = x2 - x1;
         double Slope = y / x;
         return Roundtohundred(Slope);
     }
-    public double Yintercept(){
+
+    public double Yintercept() {
 
         return y1 - (slope() * x1);
     }
 
-}
+
     public double distance(){
         double x = Math.pow(Math.abs(x2-x1),2);
         double y = Math.pow(Math.abs(y2-y1),2);
